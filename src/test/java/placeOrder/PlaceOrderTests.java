@@ -7,16 +7,16 @@ import pages.*;
 
 public class PlaceOrderTests extends BaseTests {
 
-    @Test
+    @Test(dependsOnMethods = "cart.CartTests.addItemToCartTest")
     public void successfulCheckoutTest() throws InterruptedException {
-        CategoriesPage categoriesPage = homePage.clickLaptopsCategory();
-        Thread.sleep(3000);
-        ItemDetailsPage itemDetailsPage = categoriesPage.openItemDetails();
-        Thread.sleep(3000);
-        AlertsPage alertsPage = itemDetailsPage.clickAddToCart();
-        String text = alertsPage.getAlertText();
-        alertsPage.acceptAlert();
-        Assert.assertEquals(text, "Product added");
+        //CategoriesPage categoriesPage = homePage.clickLaptopsCategory();
+        //Thread.sleep(3000);
+        //ItemDetailsPage itemDetailsPage = categoriesPage.openItemDetails();
+        //Thread.sleep(3000);
+        //AlertsPage alertsPage = itemDetailsPage.clickAddToCart();
+        //String text = alertsPage.getAlertText();
+        //alertsPage.acceptAlert();
+        //Assert.assertEquals(text, "Product added");
         CartPage cartPage = homePage.clickCart();
         PlaceOrderPage placeOrderPage = cartPage.clickPlaceOrder();
         //Thread.sleep(3000);

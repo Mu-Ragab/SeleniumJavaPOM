@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="regression" >
+        <packages>
+            <package name="register"></package>
+            <package name="login"></package>
+            <package name="categories"></package>
+            <package name="cart"></package>
+            <package name="placeOrder"></package>
+        </packages>
+    </test>
+</suite>

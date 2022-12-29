@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 public class LoginTests extends BaseTests {
-    @Test
+    @Test(dependsOnMethods = "register.RegisterTests.testSuccessfulSignup")
     public void testSuccessfulLogin() {
         LoginPage loginPage = homePage.clickLogin();
-        loginPage.setUsername("muerrcddRagabbbghg");
+        loginPage.setUsername("Muhammad");
         loginPage.setPassword("Password123");
         loginPage.clickLoginButton();
-        Assert.assertEquals(homePage.getWelcomeText(), "Welcome muerrcddRagabbbghg");
+        Assert.assertEquals(homePage.getWelcomeText(), "Welcome Muhammad");
     }
 }

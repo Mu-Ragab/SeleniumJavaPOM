@@ -8,12 +8,11 @@ import pages.RegisterPage;
 
 public class RegisterTests extends BaseTests {
 
-
     @Test
     public void testSuccessfulSignup() {
         RegisterPage registerPage = homePage.clickSignup();
-        registerPage.setSignupUsername("muerrccvddccRagabbbghg");
-        registerPage.setSignupPassword("Password123");
+        registerPage.setSignupUsername(randomUsername);
+        registerPage.setSignupPassword(randomPassword);
         AlertsPage alertsPage = registerPage.clickSignupButton();
         String text = alertsPage.getAlertText();
         alertsPage.acceptAlert();

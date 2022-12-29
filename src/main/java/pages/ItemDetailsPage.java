@@ -20,8 +20,8 @@ public class ItemDetailsPage {
     }
 
     public AlertsPage clickAddToCart(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
+        //wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
         driver.findElement(addToCartButton).click();
         return new AlertsPage(driver);
     }
